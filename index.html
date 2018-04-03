@@ -71,10 +71,11 @@ VERSION : 1.1
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#home" class="page-scroll">Home</a></li>
             <li><a href="#one" class="page-scroll">About</a></li>
+            <li><a href="blog.html" class="page-scroll">Blog</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
             <li><a href="#two" class="page-scroll">Map</a></li>
             <li><a href="#three" class="page-scroll">Sensor View</a></li>
-            <li><a href="#four" class="page-scroll">Location selection</a></li>
-            <li><a href="#five" class="page-scroll">Contact</a></li>
+            <li><a href="#four" class="page-scroll">Contact</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -112,7 +113,7 @@ VERSION : 1.1
              <div class="col-md-12 text-center black">
                  <h3 class="title">ABOUT OUR TEAM</h3>
             <p class="a-slog">Our Team is comprised of 6 sub teams to complete all tasks. Project management team, front end team, sensor team, engeering team, mapping & planning team, and our professors.</p> 
-             </div>
+             <a href="blog.html">Click Here</a></div>
          </div>
          <div class="gap">
              
@@ -193,7 +194,6 @@ VERSION : 1.1
        </style>
         <div id="map"></div>
         <script>
-          static var url = "http://10.0.0.218:8080/";
           function initMap() {
             var current_location = {lat: 38.435311, lng: -78.871779}; // will be subscribed to the cars location 
             var destination = {lat: 38.434164, lng: -78.863109}; //will be subscribed the the destination location
@@ -216,7 +216,8 @@ VERSION : 1.1
               map: map,
               title: "ISAT"
             }); 
-            console.log( bound.getCenter() );  
+            console.log( bound.getCenter() );
+           
           }
         </script>
         <script async defer
@@ -299,43 +300,6 @@ VERSION : 1.1
  <!-- [/Sensor View]
  ============================================================================================================================-->
 
- <!-- [Locations List]
- ============================================================================================================================-->
- <section class="client-testimonial text-center black" id="four">
-            <div class="container">
-                <div class="row">
-                  <div class="col-md-12">
-                      <h3 class="title">Location Selection</h3>            
-                  </div>
-                   <div id="btn-group"></div> 
-                </div>
-            </div> 
-            <script type="text/javascript">
-              var des1 = {id: 1, name: "JMU X-Labs", lat: 38.435311, long: -78.871779};
-              var des2 = {id: 2, name: "Festival", lat: 38.432832, long: -78.859372};
-              var des3 = {id: 3, name: "Willson Hall", lat: 38.438024, long: -78.873078};
-              var des4 = {id: 4, name: "Madison Union", lat: 38.437705, long: -78.870779};
-              var des5 = {id: 5, name: "ISAT", lat: 38.434164, long: -78.863109};
-              var des6 = {id: 6, name: "Student Success Center", lat: 38.440074, long: -78.871520};
-              var url = "http://10.0.0.218:8080/";
-              var cars = [des1,des2,des3,des4,des5,des6];
-              var text = "";
-              var i;
-              for (i = 0; i < cars.length; i++) {
-                text = cars[i].name;
-                var btn = document.createElement("BUTTON");        // Create a <button> element
-                var br = document.createElement("BR");
-                var t = document.createTextNode(text);       // Create a text node
-                btn.value = cars[i].id;
-                btn.onclick = function loadMap(){
-                  
-                }; 
-                btn.appendChild(t);                                // Append the text to <button>
-                document.getElementById("btn-group").appendChild(btn);                    // Append <button> to <body>
-                document.getElementById("btn-group").appendChild(br);
-                }
-              </script>             
- </section> 
 
  <!-- [/TESTIMONIAL]
  ============================================================================================================================-->
@@ -343,7 +307,7 @@ VERSION : 1.1
  <!-- [CONTACT]
  ============================================================================================================================-->
  <!--sub-form-->
-<section class="sub-form text-center" id="eight">
+<section class="sub-form text-center" id="four">
   <div class="container">
     <div class="col-md-12">
         <h3 class="title">Subscribe to our <span class="themecolor"> News letter</span></h3>
