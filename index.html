@@ -234,10 +234,10 @@ VERSION : 1.1
         <div id="map"></div>
         <script>
           function initMap() {
-            var current_location = {
-              lat: 38.435311,
-              lng: -78.871779
-            }; // will be subscribed to the cars location 
+            current_location = {
+                  lat: myLat,
+                  lng: myLong
+            }; 
             var destination = {
               lat: 38.434164,
               lng: -78.863109
@@ -291,47 +291,62 @@ VERSION : 1.1
         <div class="row text-center">
           <div class="col-sm-3">
             <img src="images/sensor_01.jpg" class="img-responsive">
-            <h4>Battery:</h4>
-            <h4 id="battery"></h4>
-            <button type="button" onclick="httpGet()">click</button>
+            <h5 id="battery"></h5>
+            <!--<button type="button" onclick="httpGet()">click</button>-->
             <p>This will display the current charge of the battery.</p>
           </div>
           <!--Sensor 1-->
 
           <div class="col-sm-3">
             <img src="images/sensor_02.jpg" class="img-responsive">
-            <h4>GPS</h4>
-            <p>Will display if the GPS sensor is working.</p>
+            <h6>GPS</h6>
+            <p id="GPS2"></p>
+            <p id="GPS3"></p>
+           <!-- <p>Will display if the GPS sensor is working.</p><-->
           </div>
           <!-- sensor 2 -->
 
           <div class="col-sm-3">
             <img src="images/sensor_03.jpg" class="img-responsive">
-            <h4>Velodyne WLP-16 3-D Libar</h4>
+            <h5 id="velodyne"></h5>
             <p>will display if the Velodyne sensor is functioning or not.</p>
           </div>
           <!-- sensor 3 -->
 
           <div class="col-sm-3">
             <img src="images/sensor_04.jpg" class="img-responsive">
-            <h4>Lightware SF40/C Lidar</h4>
+            <h5 id="lightware"></h5>
             <p>Wil display if the Lghtware sensor is functioning or not.</p>
           </div>
           <!-- sensor 4 -->
 
           <div class="col-sm-3">
             <img src="images/sensor_05.jpg" class="img-responsive">
-            <h4>RPLIDAR A1</h4>
+            <h5 id="rplidar"></h5>
             <p>Wil display if the RPLIDAR sensor is functioning or not.</p>
           </div>
           <!-- sensor 5 -->
 
           <div class="col-sm-3">
             <img src="images/sensor_06.jpg" class="img-responsive">
-            <h4>Stereo Labs ZED Steresocs...</h4>
+            <h5 id="velocity"></h5>
             <p>Wil display if the STEAREO sensor is functioning or not.</p>
           </div>
           <!-- sensor 6 -->
+          
+          <div class="col-sm-3">
+              <img src="images/camera.jpg" class="img-responsive">
+              <h5 id="camera">Camera</h5>
+              <p>Wil display if the STEAREO sensor is functioning or not.</p>
+          </div>
+            <!-- sensor 7 -->
+            <div class="col-sm-3">
+                <img src="images/time.png" class="img-responsive">
+                <h5 id="timestamp"></h5>
+                <p>Wil display if the STEAREO sensor is functioning or not.</p>
+            </div>
+              <!-- sensor 8 -->
+
         </div>
         <!-- end row -->
 
